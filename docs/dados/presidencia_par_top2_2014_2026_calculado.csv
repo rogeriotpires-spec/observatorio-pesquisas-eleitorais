@@ -1,0 +1,33 @@
+eleicao,turno,codigo_tse,instituto,data_publicacao,candidato,partido_na_eleicao,estimativa_pct,resultado_pct,fonte,observacao,erro_pp,erro_absoluto_pp
+2014,1,BR-01021/2014,Ibope,2014-10-04,Dilma Rousseff,PT,46.0,41.59,Folha/Ibope,percentual de votos validos publicado,4.409999999999997,4.409999999999997
+2014,1,BR-01021/2014,Ibope,2014-10-04,Aecio Neves,PSDB,27.0,33.55,Folha/Ibope,percentual de votos validos publicado,-6.549999999999997,6.549999999999997
+2014,1,BR-01037/2014,Datafolha,2014-10-04,Dilma Rousseff,PT,44.0,41.59,Folha/Datafolha,percentual de votos validos publicado,2.4099999999999966,2.4099999999999966
+2014,1,BR-01037/2014,Datafolha,2014-10-04,Aecio Neves,PSDB,26.0,33.55,Folha/Datafolha,percentual de votos validos publicado,-7.549999999999997,7.549999999999997
+2018,1,BR-01537/2018,Ibope,2018-10-06,Jair Bolsonaro,PSL,41.0,46.03,UOL/Ibope,percentual de votos validos publicado,-5.030000000000001,5.030000000000001
+2018,1,BR-01537/2018,Ibope,2018-10-06,Fernando Haddad,PT,25.0,29.28,UOL/Ibope,percentual de votos validos publicado,-4.280000000000001,4.280000000000001
+2018,1,BR-01534/2018,Datafolha,2018-10-06,Jair Bolsonaro,PSL,40.0,46.03,Folha/Datafolha,percentual de votos validos publicado,-6.030000000000001,6.030000000000001
+2018,1,BR-01534/2018,Datafolha,2018-10-06,Fernando Haddad,PT,25.0,29.28,Folha/Datafolha,percentual de votos validos publicado,-4.280000000000001,4.280000000000001
+2022,1,BR-00245/2022,Datafolha,2022-10-01,Luiz Inacio Lula da Silva,PT,50.0,48.43,UOL/Datafolha,percentual de votos validos publicado,1.5700000000000003,1.5700000000000003
+2022,1,BR-00245/2022,Datafolha,2022-10-01,Jair Bolsonaro,PL,36.0,43.2,UOL/Datafolha,percentual de votos validos publicado,-7.200000000000003,7.200000000000003
+2022,1,BR-00999/2022,Ipec,2022-10-01,Luiz Inacio Lula da Silva,PT,51.0,48.43,UOL/Ipec,percentual de votos validos publicado,2.5700000000000003,2.5700000000000003
+2022,1,BR-00999/2022,Ipec,2022-10-01,Jair Bolsonaro,PL,37.0,43.2,UOL/Ipec,percentual de votos validos publicado,-6.200000000000003,6.200000000000003
+2022,1,BR-02444/2022,Quaest,2022-10-01,Luiz Inacio Lula da Silva,PT,49.0,48.43,UOL/Quaest,percentual de votos validos publicado,0.5700000000000003,0.5700000000000003
+2022,1,BR-02444/2022,Quaest,2022-10-01,Jair Bolsonaro,PL,38.0,43.2,UOL/Quaest,percentual de votos validos publicado,-5.200000000000003,5.200000000000003
+2022,1,BR-07338/2022,AtlasIntel,2022-10-01,Luiz Inacio Lula da Silva,PT,50.3,48.43,UOL/AtlasIntel,percentual de votos validos publicado,1.8699999999999974,1.8699999999999974
+2022,1,BR-07338/2022,AtlasIntel,2022-10-01,Jair Bolsonaro,PL,41.1,43.2,UOL/AtlasIntel,percentual de votos validos publicado,-2.1000000000000014,2.1000000000000014
+2026,1,BR-01708/2026,Datafolha,2026-10-03,Luiz Inácio Lula da Silva,PT,45.0,45.16,Datafolha/Folha,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-0.1599999999999966,0.1599999999999966
+2026,1,BR-01708/2026,Datafolha,2026-10-03,Flávio Bolsonaro,PL,42.0,47.03,Datafolha/Folha,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-5.030000000000001,5.030000000000001
+2026,1,BR-02197/2026,Quaest,2026-10-03,Luiz Inácio Lula da Silva,PT,46.0,45.16,Quaest/G1,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,0.8400000000000034,0.8400000000000034
+2026,1,BR-02197/2026,Quaest,2026-10-03,Flávio Bolsonaro,PL,45.0,47.03,Quaest/G1,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-2.030000000000001,2.030000000000001
+2026,1,BR-04756/2026,CNT-MDA,2026-10-03,Luiz Inácio Lula da Silva,PT,47.8,45.16,UOL/CNT-MDA,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,2.6400000000000006,2.6400000000000006
+2026,1,BR-04756/2026,CNT-MDA,2026-10-03,Flávio Bolsonaro,PL,42.1,47.03,UOL/CNT-MDA,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-4.93,4.93
+2026,1,BR-00198/2026,Palver,2026-10-03,Luiz Inácio Lula da Silva,PT,43.0,45.16,UOL/Palver,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-2.1599999999999966,2.1599999999999966
+2026,1,BR-00198/2026,Palver,2026-10-03,Flávio Bolsonaro,PL,47.0,47.03,UOL/Palver,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-0.030000000000001137,0.030000000000001137
+2026,1,BR-00999/2026,AtlasIntel-Bloomberg,2026-10-03,Luiz Inácio Lula da Silva,PT,47.0,45.16,UOL/AtlasIntel,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,1.8400000000000034,1.8400000000000034
+2026,1,BR-00999/2026,AtlasIntel-Bloomberg,2026-10-03,Flávio Bolsonaro,PL,44.1,47.03,UOL/AtlasIntel,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-2.9299999999999997,2.9299999999999997
+2026,1,BR-00509/2026,Gerp,2026-10-03,Luiz Inácio Lula da Silva,PT,44.0,45.16,Gerp/Poder360,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-1.1599999999999966,1.1599999999999966
+2026,1,BR-00509/2026,Gerp,2026-10-03,Flávio Bolsonaro,PL,46.0,47.03,Gerp/Poder360,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-1.0300000000000011,1.0300000000000011
+2026,1,BR-03519/2026,PoderData-Aya,2026-10-03,Luiz Inácio Lula da Silva,PT,45.0,45.16,PoderData/CNN,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-0.1599999999999966,0.1599999999999966
+2026,1,BR-03519/2026,PoderData-Aya,2026-10-03,Flávio Bolsonaro,PL,43.0,47.03,PoderData/CNN,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-4.030000000000001,4.030000000000001
+2026,1,BR-01122/2026,Futura,2026-09-30,Luiz Inácio Lula da Silva,PT,41.5,45.16,Futura/Poder360,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-3.6599999999999966,3.6599999999999966
+2026,1,BR-01122/2026,Futura,2026-09-30,Flávio Bolsonaro,PL,44.4,47.03,Futura/Poder360,par de lideres; amostra parcial de 7 entre 14 pesquisas compiladas,-2.6300000000000026,2.6300000000000026
