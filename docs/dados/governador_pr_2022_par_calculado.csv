@@ -1,0 +1,3 @@
+eleicao,cargo,territorio,turno,codigo_tse,instituto,data_publicacao,candidato,partido_na_eleicao,estimativa_votos_validos_pct,resultado_votos_validos_pct,erro_pp,fonte_pesquisa,fonte_resultado,observacao
+2022,Governador,PR,1,PR-02084/2022,Ipec,2022-10-01,Carlos Massa Ratinho Junior,PSD,62,69.64,-7.64,G1/Ipec PDF,Totalização TSE 100%,estimativa da última pesquisa divulgada antes da votação; resultado consolidado
+2022,Governador,PR,1,PR-02084/2022,Ipec,2022-10-01,Roberto Requiao,PT,29,26.23,2.77,G1/Ipec PDF,Totalização TSE 100%,estimativa da última pesquisa divulgada antes da votação; resultado consolidado
