@@ -1,0 +1,10 @@
+eleicao,cargo,registro_tse,instituto,data_publicacao,candidato,partido_2024,estimativa_pct,resultado_pct,fonte,observacao,erro_pp,erro_absoluto_pp
+2024,Prefeito Rio de Janeiro,RJ-02193/2024,Quaest,2024-10-05,Eduardo Paes,PSD,61.0,60.47,UOL/Globo,votos validos,0.5300000000000011,0.5300000000000011
+2024,Prefeito Rio de Janeiro,RJ-02193/2024,Quaest,2024-10-05,Alexandre Ramagem,PL,29.0,30.81,UOL/Globo,votos validos,-1.8099999999999987,1.8099999999999987
+2024,Prefeito Rio de Janeiro,RJ-02193/2024,Quaest,2024-10-05,Tarcisio Motta,PSOL,6.0,4.2,UOL/Globo,votos validos,1.7999999999999998,1.7999999999999998
+2024,Prefeito Rio de Janeiro,RJ-07603/2024,AtlasIntel,2024-10-05,Eduardo Paes,PSD,53.3,60.47,UOL/AtlasIntel,votos validos,-7.170000000000002,7.170000000000002
+2024,Prefeito Rio de Janeiro,RJ-07603/2024,AtlasIntel,2024-10-05,Alexandre Ramagem,PL,35.1,30.81,UOL/AtlasIntel,votos validos,4.290000000000003,4.290000000000003
+2024,Prefeito Rio de Janeiro,RJ-07603/2024,AtlasIntel,2024-10-05,Tarcisio Motta,PSOL,6.8,4.2,UOL/AtlasIntel,votos validos,2.5999999999999996,2.5999999999999996
+2024,Prefeito Rio de Janeiro,RJ-04865/2024,Datafolha,2024-10-05,Eduardo Paes,PSD,61.0,60.47,UOL/Datafolha,votos validos,0.5300000000000011,0.5300000000000011
+2024,Prefeito Rio de Janeiro,RJ-04865/2024,Datafolha,2024-10-05,Alexandre Ramagem,PL,24.0,30.81,UOL/Datafolha,votos validos,-6.809999999999999,6.809999999999999
+2024,Prefeito Rio de Janeiro,RJ-04865/2024,Datafolha,2024-10-05,Tarcisio Motta,PSOL,7.0,4.2,UOL/Datafolha,votos validos,2.8,2.8
