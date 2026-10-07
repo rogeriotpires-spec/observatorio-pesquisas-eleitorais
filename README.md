@@ -1,11 +1,17 @@
 # Observatório de Pesquisas Eleitorais
 
-Site estático do protocolo metodológico inicial do estudo.
+Site estático com o relatório exploratório sobre pesquisas eleitorais brasileiras, com data de corte em 7 de outubro de 2026.
+
+## Conteúdo
+
+- `docs/index.html`: síntese dos achados e acesso às tabelas.
+- `docs/relatorio.html`: relatório integral, metodologia, resultados, limites e referências.
+- `docs/dados/`: arquivos CSV de resultados e matriz de casos, além do protocolo metodológico.
 
 ## Publicação no GitHub Pages
 
-1. Abra **Settings → Pages** neste repositório.
-2. Em **Build and deployment**, escolha **Deploy from a branch**.
-3. Selecione a branch `main` e a pasta `/docs`, depois salve.
+Em **Settings → Pages**, escolha **Deploy from a branch**, a branch `main` e a pasta `/docs`.
 
-O site apresentará o protocolo metodológico. A coleta e os resultados ainda não foram iniciados.
+## Regenerar as páginas
+
+Execute `python build_site.py` na pasta `github-pages`, com o relatório Markdown disponível em `estudo-pesquisas-eleitorais/estudo/RELATORIO_FINAL.md`.
