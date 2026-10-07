@@ -1,0 +1,10 @@
+eleicao,cargo,registro_tse,instituto,data_publicacao,candidato,partido_2024,estimativa_pct,resultado_pct,fonte,observacao,erro_pp,erro_absoluto_pp
+2024,Prefeito São Paulo,SP-05101/2024,Datafolha,2024-10-05,Ricardo Nunes,MDB,26.0,29.48,UOL/Folha,percentual de votos válidos; arredondado,-3.4800000000000004,3.4800000000000004
+2024,Prefeito São Paulo,SP-05101/2024,Datafolha,2024-10-05,Guilherme Boulos,PSOL,29.0,29.07,UOL/Folha,percentual de votos válidos; arredondado,-0.07000000000000028,0.07000000000000028
+2024,Prefeito São Paulo,SP-05101/2024,Datafolha,2024-10-05,Pablo Marçal,PRTB,26.0,28.14,UOL/Folha,percentual de votos válidos; arredondado,-2.1400000000000006,2.1400000000000006
+2024,Prefeito São Paulo,SP-01150/2024,Quaest,2024-10-05,Ricardo Nunes,MDB,28.0,29.48,UOL/Globo,percentual de votos válidos; arredondado,-1.4800000000000004,1.4800000000000004
+2024,Prefeito São Paulo,SP-01150/2024,Quaest,2024-10-05,Guilherme Boulos,PSOL,29.0,29.07,UOL/Globo,percentual de votos válidos; arredondado,-0.07000000000000028,0.07000000000000028
+2024,Prefeito São Paulo,SP-01150/2024,Quaest,2024-10-05,Pablo Marçal,PRTB,27.0,28.14,UOL/Globo,percentual de votos válidos; arredondado,-1.1400000000000006,1.1400000000000006
+2024,Prefeito São Paulo,SP-00197/2024,AtlasIntel,2024-10-05,Ricardo Nunes,MDB,20.0,29.48,UOL/AtlasIntel,percentual de votos válidos; arredondado,-9.48,9.48
+2024,Prefeito São Paulo,SP-00197/2024,AtlasIntel,2024-10-05,Guilherme Boulos,PSOL,32.3,29.07,UOL/AtlasIntel,percentual de votos válidos,3.229999999999997,3.229999999999997
+2024,Prefeito São Paulo,SP-00197/2024,AtlasIntel,2024-10-05,Pablo Marçal,PRTB,30.0,28.14,UOL/AtlasIntel,percentual de votos válidos,1.8599999999999994,1.8599999999999994
