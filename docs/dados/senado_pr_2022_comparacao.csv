@@ -1,0 +1,21 @@
+instituto,registro_tse,publicacao_verificada,data_coleta_registro_tse,data_coleta_publicacao,cenario,candidato,partido,estimativa_votos_validos_pct,fonte_estimativa,votos_oficiais,votos_validos_candidatos_total,resultado_oficial_votos_validos_pct,erro_assinado_pp_estimativa_menos_resultado,erro_absoluto_pp
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Alvaro Dias,PODE,41,UOL e correção pública sobre campo,1396089,5830576,23.944272,17.055728,17.055728
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Sergio Moro,UNIÃO,35,UOL e correção pública sobre campo,1953188,5830576,33.499057,1.500943,1.500943
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Paulo Martins,PL,14,UOL e correção pública sobre campo,1697962,5830576,29.121685,-15.121685,15.121685
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Rosane Ferreira,PV,3,UOL e correção pública sobre campo,475597,5830576,8.156947,-5.156947,5.156947
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Aline Sleutjes,PROS,2,UOL,89560,5830576,1.536040,0.463960,0.463960
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Orlando Pessuti,MDB,2,UOL,63784,5830576,1.093957,0.906043,0.906043
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Dr Saboia,PMN,1,UOL,2521,5830576,0.043238,0.956762,0.956762
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Desiree Salgado,PDT,1,UOL,130520,5830576,2.238544,-1.238544,1.238544
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Laerson Matias,PSOL,1,UOL,17953,5830576,0.307911,0.692089,0.692089
+Ipec,PR-02084/2022,2022-10-01,2022-09-25 a 2022-10-01,2022-09-28 a 2022-09-30,estimulado,Roberto França da Silva Junior,PCO,1,UOL,3402,5830576,0.058348,0.941652,0.941652
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Sergio Moro,UNIÃO,31.1,Relatório oficial Veritá,1953188,5830576,33.499057,-2.399057,2.399057
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Paulo Martins,PL,28.8,Relatório oficial Veritá,1697962,5830576,29.121685,-0.321685,0.321685
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Alvaro Dias,PODE,26.9,Relatório oficial Veritá,1396089,5830576,23.944272,2.955728,2.955728
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Aline Sleutjes,PROS,3.8,Relatório oficial Veritá,89560,5830576,1.536040,2.263960,2.263960
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Desiree Salgado,PDT,3.5,Relatório oficial Veritá,130520,5830576,2.238544,1.261456,1.261456
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Rosane Ferreira,PV,3.4,Relatório oficial Veritá,475597,5830576,8.156947,-4.756947,4.756947
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Orlando Pessuti,MDB,1.4,Relatório oficial Veritá,63784,5830576,1.093957,0.306043,0.306043
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Laerson Matias,PSOL,0.5,Relatório oficial Veritá,17953,5830576,0.307911,0.192089,0.192089
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Dr Saboia,PMN,0.5,Relatório oficial Veritá,2521,5830576,0.043238,0.456762,0.456762
+Veritá,PR-02170/2022,2022-10-01,2022-09-25 a 2022-09-29,2022-09-25 a 2022-09-29,estimulado,Roberto França da Silva Junior,PCO,0.2,Relatório oficial Veritá,3402,5830576,0.058348,0.141652,0.141652
