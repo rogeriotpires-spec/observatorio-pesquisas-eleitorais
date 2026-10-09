@@ -48,3 +48,13 @@ body{padding-bottom:52px}
  .timeline-more__menu{min-width:220px;right:-2px}
  .timeline-back{font-size:11px;padding:8px;max-width:120px;text-align:center}
 }
+
+
+/* Três seções da revista visíveis diretamente, sem menu suspenso. */
+.timeline-feature-links{display:flex;align-items:stretch;justify-content:center;gap:0;min-height:44px;background:#f8f7f5;border-top:1px solid #e8e5e1}
+.timeline-feature-links a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:9px 24px;font:600 12px/1.25 Arial,Helvetica,sans-serif;color:#343434;text-decoration:none;text-align:center;border-bottom:3px solid transparent;transition:background .15s ease,color .15s ease}
+.timeline-feature-links a:hover,.timeline-feature-links a:focus-visible{background:#efebe7;color:#982d26}
+.timeline-feature-links a[aria-current="page"]{color:#9c3028;border-bottom-color:#b22d25;font-weight:700}
+.timeline-sitebar .timeline-more{display:none}
+@media(max-width:1130px){.timeline-sitebar .timeline-more{display:block}}
+@media(max-width:600px){.timeline-feature-links{min-height:48px}.timeline-feature-links a{flex:1;min-width:0;min-height:48px;padding:8px 5px;font-size:10.5px;white-space:normal}}
