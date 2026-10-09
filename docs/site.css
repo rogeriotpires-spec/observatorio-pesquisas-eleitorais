@@ -124,3 +124,5 @@ h1,h2,.section-head h2,.panel h3,.case-card h3,.page-head h1{font-family:"Playfa
 .author-credit__byline strong,.author-credit__socials b{color:#f6f2ee}
 .author-credit a{color:#d8b9a8}.author-credit a:hover,.author-credit a:focus-visible{color:#ff9b71}
 @media(max-width:600px){.nav{scrollbar-width:none}.nav a{white-space:nowrap}}
+
+.stat .unit{font-size:.34em;letter-spacing:0;white-space:nowrap;vertical-align:baseline}
