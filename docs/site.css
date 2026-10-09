@@ -12,3 +12,39 @@ body{padding-bottom:52px}
 .author-credit__inner{max-width:var(--max);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:11px;line-height:1.3}
 .author-credit__byline{letter-spacing:.025em}.author-credit__byline strong{color:#f4eee9;font-weight:700}.author-credit__socials{display:flex;align-items:center;gap:18px}.author-credit a{color:#d8b9a8;text-decoration:none;transition:color .15s ease}.author-credit a:hover,.author-credit a:focus-visible{color:#ff9b71;text-decoration:underline}.author-credit__socials a{white-space:nowrap}.author-credit__socials b{color:#fff;font-weight:700}
 @media(max-width:520px){body{padding-bottom:66px}.author-credit{padding:9px 13px calc(9px + env(safe-area-inset-bottom))}.author-credit__inner{display:grid;grid-template-columns:1fr auto;gap:7px 10px;font-size:10px}.author-credit__byline{grid-column:1/-1}.author-credit__socials{gap:16px}}
+
+
+/* Navegação editorial da Revista Timeline, independente do menu do Observatório.
+   Mantida sem JavaScript para funcionar com teclado, celular e links diretos. */
+.timeline-sitebar{position:relative;z-index:11;background:#fff;color:#1b1b1b;border-bottom:1px solid #e4e4e4}
+.timeline-sitebar__inner{max-width:1280px;min-height:66px;margin:auto;padding:8px 22px;display:flex;align-items:center;gap:24px}
+.timeline-wordmark{flex-shrink:0;font-family:Georgia,'Times New Roman',serif;font-size:34px;font-weight:400;line-height:1;letter-spacing:-.065em;text-transform:uppercase;text-decoration:none;color:#151515}
+.timeline-wordmark:hover,.timeline-wordmark:focus-visible{color:#151515;text-decoration:none}
+.timeline-primary-nav{display:flex;align-items:center;gap:19px;flex:1;min-width:0;white-space:nowrap}
+.timeline-primary-nav a,.timeline-more summary,.timeline-back{font-family:Arial,Helvetica,sans-serif;color:#30353a;font-size:12px;line-height:1.3;font-weight:500;text-decoration:none}
+.timeline-primary-nav a:hover,.timeline-primary-nav a:focus-visible,.timeline-more summary:hover,.timeline-more a:hover,.timeline-back:hover{color:#b12b23}
+.timeline-more{position:relative;flex-shrink:0}
+.timeline-more summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:5px;padding:12px 5px}
+.timeline-more summary::-webkit-details-marker{display:none}
+.timeline-more summary:after{content:'⌄';font-size:16px;line-height:.8;position:relative;top:-2px}
+.timeline-more[open] summary:after{transform:rotate(180deg);top:2px}
+.timeline-more__menu{position:absolute;right:0;top:calc(100% + 4px);min-width:208px;max-height:min(68vh,440px);overflow-y:auto;background:#fff;border:1px solid #ddd;border-radius:9px;box-shadow:0 14px 36px #0002;padding:7px;display:flex;flex-direction:column;z-index:32}
+.timeline-more__menu a{display:block;padding:10px 11px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.3;color:#242424;text-decoration:none;border-radius:5px}
+.timeline-more__menu a:hover,.timeline-more__menu a:focus-visible{background:#f4efeb;color:#9e211c}
+.timeline-only-mobile{display:none!important}
+.timeline-back{white-space:nowrap;border:1px solid #dedede;border-radius:6px;padding:9px 11px}
+.timeline-back:hover,.timeline-back:focus-visible{border-color:#b12b23}
+@media(max-width:1130px){
+ .timeline-sitebar__inner{min-height:60px;padding:8px 17px;gap:15px}
+ .timeline-primary-nav{display:none}
+ .timeline-more{margin-left:auto}
+ .timeline-only-mobile{display:block!important}
+ .timeline-back{font-size:12px}
+}
+@media(max-width:600px){
+ .timeline-sitebar__inner{min-height:56px;gap:8px;padding:7px 13px}
+ .timeline-wordmark{font-size:26px}
+ .timeline-more summary{font-size:12px;padding:9px 6px}
+ .timeline-more__menu{min-width:220px;right:-2px}
+ .timeline-back{font-size:11px;padding:8px;max-width:120px;text-align:center}
+}
