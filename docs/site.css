@@ -126,3 +126,6 @@ h1,h2,.section-head h2,.panel h3,.case-card h3,.page-head h1{font-family:"Playfa
 @media(max-width:600px){.nav{scrollbar-width:none}.nav a{white-space:nowrap}}
 
 .stat .unit{font-size:.34em;letter-spacing:0;white-space:nowrap;vertical-align:baseline}
+
+/* Contraste dos valores numéricos nos gráficos */
+.duel-val small,.result-line b,.rankline .val,.mval{color:#fff!important;font-weight:800!important;text-shadow:0 1px 2px rgba(0,0,0,.8)}
