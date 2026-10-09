@@ -14,47 +14,35 @@ body{padding-bottom:52px}
 @media(max-width:520px){body{padding-bottom:66px}.author-credit{padding:9px 13px calc(9px + env(safe-area-inset-bottom))}.author-credit__inner{display:grid;grid-template-columns:1fr auto;gap:7px 10px;font-size:10px}.author-credit__byline{grid-column:1/-1}.author-credit__socials{gap:16px}}
 
 
-/* Navegação editorial da Revista Timeline, independente do menu do Observatório.
-   Mantida sem JavaScript para funcionar com teclado, celular e links diretos. */
-.timeline-sitebar{position:relative;z-index:11;background:#fff;color:#1b1b1b;border-bottom:1px solid #e4e4e4}
-.timeline-sitebar__inner{max-width:1280px;min-height:66px;margin:auto;padding:8px 22px;display:flex;align-items:center;gap:24px}
-.timeline-wordmark{flex-shrink:0;font-family:Georgia,'Times New Roman',serif;font-size:34px;font-weight:400;line-height:1;letter-spacing:-.065em;text-transform:uppercase;text-decoration:none;color:#151515}
-.timeline-wordmark:hover,.timeline-wordmark:focus-visible{color:#151515;text-decoration:none}
-.timeline-primary-nav{display:flex;align-items:center;gap:19px;flex:1;min-width:0;white-space:nowrap}
-.timeline-primary-nav a,.timeline-more summary,.timeline-back{font-family:Arial,Helvetica,sans-serif;color:#30353a;font-size:12px;line-height:1.3;font-weight:500;text-decoration:none}
-.timeline-primary-nav a:hover,.timeline-primary-nav a:focus-visible,.timeline-more summary:hover,.timeline-more a:hover,.timeline-back:hover{color:#b12b23}
-.timeline-more{position:relative;flex-shrink:0}
-.timeline-more summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:5px;padding:12px 5px}
-.timeline-more summary::-webkit-details-marker{display:none}
-.timeline-more summary:after{content:'⌄';font-size:16px;line-height:.8;position:relative;top:-2px}
-.timeline-more[open] summary:after{transform:rotate(180deg);top:2px}
-.timeline-more__menu{position:absolute;right:0;top:calc(100% + 4px);min-width:208px;max-height:min(68vh,440px);overflow-y:auto;background:#fff;border:1px solid #ddd;border-radius:9px;box-shadow:0 14px 36px #0002;padding:7px;display:flex;flex-direction:column;z-index:32}
-.timeline-more__menu a{display:block;padding:10px 11px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.3;color:#242424;text-decoration:none;border-radius:5px}
-.timeline-more__menu a:hover,.timeline-more__menu a:focus-visible{background:#f4efeb;color:#9e211c}
-.timeline-only-mobile{display:none!important}
-.timeline-back{white-space:nowrap;border:1px solid #dedede;border-radius:6px;padding:9px 11px}
-.timeline-back:hover,.timeline-back:focus-visible{border-color:#b12b23}
-@media(max-width:1130px){
- .timeline-sitebar__inner{min-height:60px;padding:8px 17px;gap:15px}
- .timeline-primary-nav{display:none}
- .timeline-more{margin-left:auto}
- .timeline-only-mobile{display:block!important}
- .timeline-back{font-size:12px}
+/* Cabeçalho da Revista Timeline. Imita a disposição do tema "Padrão" do Substack.
+   A navegação do Observatório permanece independente abaixo deste cabeçalho. */
+.timeline-sitebar{position:relative;z-index:11;background:#fff;color:#1f2430;border-bottom:1px solid #dedfe2;font-family:Arial,Helvetica,sans-serif}
+.timeline-sitebar__masthead{max-width:1380px;margin:auto;min-height:91px;padding:13px 20px;display:flex;align-items:center;justify-content:center;position:relative}
+.timeline-sitebar__brand{color:#11151c;text-decoration:none;font-family:Georgia,'Times New Roman',serif;font-weight:400;font-variant:small-caps;letter-spacing:-.035em;line-height:1;font-size:50px}
+.timeline-sitebar__brand:hover,.timeline-sitebar__brand:focus-visible{color:#11151c}
+.timeline-sitebar__tools{position:absolute;right:20px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:11px}
+.timeline-sitebar__tools a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#3e4b60}
+.timeline-sitebar__tools a:hover,.timeline-sitebar__tools a:focus-visible{color:#14213a}
+.timeline-sitebar__tools svg{height:18px;width:18px;display:block}
+.timeline-sitebar__return{border-radius:5px;background:#f0f2f6;border:1px solid #e0e4ec;padding:8px 12px;white-space:nowrap;font-size:12px;font-weight:600}
+.timeline-sitebar__navigation{border-top:1px solid #f0f0f0}
+.timeline-sitebar__links{display:flex;align-items:center;justify-content:center;gap:clamp(12px,1.55vw,26px);max-width:1380px;margin:0 auto;padding:0 14px;min-height:51px;white-space:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.timeline-sitebar__links::-webkit-scrollbar{display:none}
+.timeline-sitebar__links a{position:relative;flex:0 0 auto;display:flex;align-items:center;justify-content:center;padding:15px 0 13px;font-size:clamp(11px,1.04vw,13px);line-height:1.5;font-weight:400;color:#3d424b;text-decoration:none;border-bottom:2px solid transparent}
+.timeline-sitebar__links a:hover,.timeline-sitebar__links a:focus-visible{color:#111c32}
+.timeline-sitebar__links a[aria-current="page"]{border-bottom-color:#2b3548;color:#18202d}
+@media(max-width:1000px){
+ .timeline-sitebar__masthead{min-height:75px}
+ .timeline-sitebar__brand{font-size:44px}
+ .timeline-sitebar__links{justify-content:flex-start;gap:20px;padding-left:18px;padding-right:18px}
+ .timeline-sitebar__links a{font-size:13px}
 }
 @media(max-width:600px){
- .timeline-sitebar__inner{min-height:56px;gap:8px;padding:7px 13px}
- .timeline-wordmark{font-size:26px}
- .timeline-more summary{font-size:12px;padding:9px 6px}
- .timeline-more__menu{min-width:220px;right:-2px}
- .timeline-back{font-size:11px;padding:8px;max-width:120px;text-align:center}
+ .timeline-sitebar__masthead{min-height:62px;padding:10px}
+ .timeline-sitebar__brand{font-size:33px}
+ .timeline-sitebar__tools{right:10px;gap:8px}
+ .timeline-sitebar__tools svg{width:15px;height:15px}
+ .timeline-sitebar__return{font-size:10px;padding:6px 8px}
+ .timeline-sitebar__links{gap:18px;min-height:45px}
+ .timeline-sitebar__links a{font-size:12px;padding:12px 0 11px}
 }
-
-
-/* Três seções da revista visíveis diretamente, sem menu suspenso. */
-.timeline-feature-links{display:flex;align-items:stretch;justify-content:center;gap:0;min-height:44px;background:#f8f7f5;border-top:1px solid #e8e5e1}
-.timeline-feature-links a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:9px 24px;font:600 12px/1.25 Arial,Helvetica,sans-serif;color:#343434;text-decoration:none;text-align:center;border-bottom:3px solid transparent;transition:background .15s ease,color .15s ease}
-.timeline-feature-links a:hover,.timeline-feature-links a:focus-visible{background:#efebe7;color:#982d26}
-.timeline-feature-links a[aria-current="page"]{color:#9c3028;border-bottom-color:#b22d25;font-weight:700}
-.timeline-sitebar .timeline-more{display:none}
-@media(max-width:1130px){.timeline-sitebar .timeline-more{display:block}}
-@media(max-width:600px){.timeline-feature-links{min-height:48px}.timeline-feature-links a{flex:1;min-width:0;min-height:48px;padding:8px 5px;font-size:10.5px;white-space:normal}}
