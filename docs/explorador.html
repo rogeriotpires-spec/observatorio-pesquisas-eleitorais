@@ -40,4 +40,54 @@ tbody.innerHTML=rows.map(r=>`<tr><td>${r.year} · ${r.race}</td><td>${r.poll}</t
 q.addEventListener('input',draw);cargo.addEventListener('change',draw);ano.addEventListener('change',draw);
 Promise.all(files.map(async f=>{const res=await fetch(`dados/${f}`);if(!res.ok)throw new Error(`Falha ao abrir ${f}`);return normalize(f,csvParse(await res.text()))})).then(groups=>{data=groups.flat();[...new Set(data.map(r=>r.race))].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(v=>cargo.add(new Option(v,v)));[...new Set(data.map(r=>r.year))].sort().reverse().forEach(v=>ano.add(new Option(v,v)));draw()}).catch(err=>{status.textContent='Não foi possível carregar a base. Use os links de CSV abaixo para acessar os arquivos.';console.error(err)});
 </script><div class="author-credit" aria-label="Créditos e redes sociais"><div class="author-credit__inner"><span class="author-credit__byline">Pesquisa e análise: <strong>Rogerio Pires</strong></span><nav class="author-credit__socials" aria-label="Redes sociais do autor"><a href="https://www.instagram.com/rogerrio/" target="_blank" rel="noopener noreferrer">Instagram <b>@rogerrio</b></a><a href="https://x.com/rogerrioX" target="_blank" rel="noopener noreferrer">X <b>@rogerrioX</b></a></nav></div></div>
+<script>
+(() => {
+  const api = "https://observatorio-counter.rogeriotpires.workers.dev";
+  const format = value => Number(value).toLocaleString("pt-BR");
+
+  function show(name, value) {
+    document.querySelectorAll('[data-live-counter="' + name + '"]').forEach(node => {
+      node.textContent = format(value);
+    });
+  }
+
+  async function recordVisitAndLoadCounts() {
+    try {
+      const visitResponse = await fetch(api + "/visit", {
+        method: "POST",
+        keepalive: true
+      });
+      if (visitResponse.ok) {
+        const visit = await visitResponse.json();
+        if (visit.name === "visits") show("visits", visit.value);
+      }
+
+      const countsResponse = await fetch(api + "/counts", { cache: "no-store" });
+      if (!countsResponse.ok) return;
+      const counts = await countsResponse.json();
+      if (Number.isFinite(counts.visits)) show("visits", counts.visits);
+      if (Number.isFinite(counts.downloads)) show("downloads", counts.downloads);
+    } catch (_) {
+      // Keep the last displayed values if the counter service is temporarily unavailable.
+    }
+  }
+
+  document.querySelectorAll('a[download]').forEach(link => {
+    const path = new URL(link.href, window.location.href).pathname;
+    if (!path.endsWith("/relatorio-final.pdf")) return;
+
+    link.addEventListener("click", () => {
+      fetch(api + "/download", {
+        method: "POST",
+        keepalive: true
+      }).then(response => response.ok ? response.json() : null)
+        .then(result => {
+          if (result && result.name === "downloads") show("downloads", result.value);
+        }).catch(() => {});
+    });
+  });
+
+  recordVisitAndLoadCounts();
+})();
+</script>
 </body></html>
