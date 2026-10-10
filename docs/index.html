@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="A urna chegou. O retrato, não. Pesquisas eleitorais comparadas ao resultado oficial.">
 <meta name="twitter:image" content="https://observatorio.revistatimeline.com/og-image.svg">
 <title>Pesquisas & Urnas | Observatório Eleitoral</title>
-<link rel="stylesheet" href="site.css?v=rankings-sample2-20261010">
+<link rel="stylesheet" href="site.css?v=demo-counters-20261010">
 </head>
 <body>
 
@@ -73,6 +73,8 @@
 <section class="section" id="metodo"><div class="section-head"><div><span class="section-number">04 · Como medimos</span><h2>Regra clara. Mesma régua.</h2></div><p>O objetivo é medir distância entre estimativa e urna, não adivinhar intenção nem explicar por que as pessoas votaram.</p></div><div class="method-grid"><article class="method"><span class="num">PASSO 01</span><h3>Última divulgação antes da votação</h3><p>Pesquisa pública elegível, com horário anterior às 8h locais. Publicação no dia da eleição sem horário verificável fica fora da análise principal.</p></article><article class="method"><span class="num">PASSO 02</span><h3>Votos válidos com votos válidos</h3><p>Percentuais são comparados na mesma base. Denominadores diferentes ficam separados ou identificados como análise de sensibilidade.</p></article><article class="method"><span class="num">PASSO 03</span><h3>Erro acima, abaixo e distância média</h3><p>Erro = estimativa menos resultado. Positivo: a pesquisa superestimou; negativo: subestimou. O erro absoluto médio (MAE) resume a distância, sem indicar direção. Um valor menor significa maior proximidade no conjunto comparado.</p></article><article class="method"><span class="num">PASSO 04</span><h3>Rankings dentro da disputa</h3><p>Institutos são comparados apenas no mesmo cargo e no mesmo conjunto de candidaturas. A análise partidária usa a filiação na data da eleição.</p></article></div><div class="guardrail"><strong>O que estes dados não provam.</strong><p>A amostra é intencional e documental, não um censo do Brasil. Erros observados não provam fraude, má-fé, voto útil ou influência sobre decisões de campanha. As diferenças não autorizam generalização para todo o mercado.</p></div></section>
 
 <section class="section" id="dados"><div class="section-head"><div><span class="section-number">05 · Confira por conta própria</span><h2>Fonte, cálculo e relatório.</h2></div><p>Abra os arquivos de cada disputa ou navegue pela tabela interativa. O relatório documenta critérios, ressalvas e proveniência.</p></div><div class="download-grid"><a class="download" href="relatorio-final.pdf?v=e50d43aa" download><strong>Relatório científico exploratório</strong><span>PDF · 13 páginas · corte em 7/10/2026</span></a><a class="download" href="explorador.html"><strong>Explorador das estimativas</strong><span>Filtre candidatura, instituto, cargo e eleição</span></a><a class="download" href="relatorio.html"><strong>Metodologia e limites</strong><span>Critérios, fórmulas e interpretação</span></a><a class="download" href="dados/presidencia_par_top2_2014_2026_calculado.csv"><strong>Presidência · 2014–2026</strong><span>CSV · pesquisas comparadas aos resultados dos dois candidatos mais votados</span></a><a class="download" href="dados/senado_pr_2022_comparacao.csv"><strong>Senado PR · 2022</strong><span>CSV · dez candidaturas e dois institutos</span></a><a class="download" href="dados/matriz_de_casos.csv"><strong>Matriz dos nove casos</strong><span>CSV · escopo, seleção e limitações</span></a></div><div class="callout"><b>Atualização do caso do Rio:</b> os números refletem a totalização consultada em 7 de outubro de 2026. A situação dos votos sub judice pode alterar o resultado jurídico; por isso, esse bloco permanece marcado como provisório.</div></section>
+
+<section class="section" id="audiencia"><div class="section-head"><div><span class="section-number">Transparência dos números</span><h2>Contadores demonstrativos</h2></div><p>Uma referência visual com valores iniciais definidos para esta demonstração.</p></div><div class="demo-counters"><div class="demo-counter-grid"><article class="demo-counter"><span class="demo-counter-label">Visitas registradas neste navegador</span><strong class="demo-counter-value" id="demo-visit-count">12.342</strong></article><article class="demo-counter"><span class="demo-counter-label">Solicitações de download neste navegador</span><strong class="demo-counter-value" id="demo-download-count">7.231</strong></article></div><p class="demo-counter-note"><strong>Importante:</strong> os valores iniciais são fictícios. A contagem fica somente neste navegador e não representa o total real de visitantes ou downloads do site. Visitas aumentam a cada abertura; downloads aumentam quando se clica no link do relatório, sem confirmação de que o arquivo foi concluído.</p></div></section>
 </main><footer class="footer"><div class="footer-in"><span>OBSERVATÓRIO DE PESQUISAS ELEITORAIS · ESTUDO EXPLORATÓRIO</span><span>Fatos da amostra, sem inferência de intenção · <a href="relatorio.html">Protocolo e limitações</a></span></div></footer>
 <script>
 const marginRows=[
@@ -88,6 +90,29 @@ function renderMargin(cycle='all'){
 }
 document.querySelectorAll('[data-cycle]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-cycle]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));renderMargin(btn.dataset.cycle)}));
 renderMargin();
+// Contadores demonstrativos: os dados ficam apenas no navegador da pessoa.
+(function(){
+ const visitKey='timeline-demo-visits-v1';
+ const downloadKey='timeline-demo-report-clicks-v1';
+ const visitStart=12342, downloadStart=7231;
+ function readCount(key, initial){
+  try { const saved=localStorage.getItem(key); return saved===null?initial:Number(saved)||initial; }
+  catch(e){ return initial; }
+ }
+ function saveCount(key,value){ try { localStorage.setItem(key,String(value)); } catch(e) {} }
+ let visits=readCount(visitKey,visitStart-1)+1;
+ saveCount(visitKey,visits);
+ let downloads=readCount(downloadKey,downloadStart);
+ const visitEl=document.getElementById('demo-visit-count');
+ const downloadEl=document.getElementById('demo-download-count');
+ const format=n=>new Intl.NumberFormat('pt-BR').format(n);
+ if(visitEl) visitEl.textContent=format(visits);
+ if(downloadEl) downloadEl.textContent=format(downloads);
+ document.querySelectorAll('a[download][href*="relatorio-final.pdf"]').forEach(link=>link.addEventListener('click',()=>{
+  downloads+=1; saveCount(downloadKey,downloads);
+  if(downloadEl) downloadEl.textContent=format(downloads);
+ }));
+})();
 </script>
 <div class="author-credit" aria-label="Créditos e redes sociais"><div class="author-credit__inner"><span class="author-credit__byline">Pesquisa e análise: <strong>Rogerio Pires</strong></span><nav class="author-credit__socials" aria-label="Redes sociais do autor"><a href="https://www.instagram.com/rogerrio/" target="_blank" rel="noopener noreferrer">Instagram <b>@rogerrio</b></a><a href="https://x.com/rogerrioX" target="_blank" rel="noopener noreferrer">X <b>@rogerrioX</b></a></nav></div></div>
 </body></html>
