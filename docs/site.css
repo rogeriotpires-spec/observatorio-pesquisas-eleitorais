@@ -134,3 +134,7 @@ h1,h2,.section-head h2,.panel h3,.case-card h3,.page-head h1{font-family:"Playfa
 
 /* Faz as larguras percentuais dos preenchimentos serem renderizadas nos spans */
 .duel-fill,.result-line .rfill,.rankline .fill,.cycle-fill{display:block}
+
+/* Tabelas comparativas de amostra pequena, sem posição de vencedor */
+.ranking.partial .rankline{grid-template-columns:minmax(100px,1fr) 1.3fr 65px}
+.ranking.partial .rankline .pos{display:none}
