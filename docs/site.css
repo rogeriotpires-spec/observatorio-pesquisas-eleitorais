@@ -147,3 +147,24 @@ h1,h2,.section-head h2,.panel h3,.case-card h3,.page-head h1{font-family:"Playfa
 .team-visits b,.team-downloads b{color:#ffb389;font-variant-numeric:tabular-nums}
 .hero-actions .team-downloads{align-self:center;color:#bdb2aa;font-size:11px;white-space:nowrap}
 @media(max-width:600px){.eyebrow .team-visits{margin:7px 0 0;display:flex;width:max-content}.hero-actions{align-items:flex-start}.hero-actions .team-downloads{align-self:center;font-size:10px}}
+
+
+/* Navegação e leitura da nova organização */
+html{scroll-padding-top:90px}
+#casos-especiais{scroll-margin-top:80px}
+.conclusion-brief{margin-top:18px;padding:24px 28px;background:#171514;color:#fff;border-left:5px solid var(--orange);border-radius:12px}
+.conclusion-brief .section-number{background:var(--orange);color:#171514}
+.conclusion-brief h3{font:700 clamp(24px,3vw,36px)/1.1 'Playfair Display',Georgia,serif;margin:14px 0 8px;max-width:900px}
+.conclusion-brief p{max-width:980px;color:#e0d8d2;margin:0;font-size:15px}
+.case-filters{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr)) auto;gap:10px;align-items:end;padding:15px;margin:18px 0 22px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.case-filters label{display:grid;gap:5px;color:var(--muted);font-size:11px;font-weight:800}
+.case-filters select,.case-filters button{min-width:0;padding:9px 10px;background:#fff;border:1px solid var(--line);border-radius:7px;color:var(--ink);font-size:13px}
+.case-filters button{cursor:pointer;font-weight:700}
+.case-filters button:hover{border-color:var(--orange)}
+#filter-count{grid-column:1/-1;color:var(--muted);font-size:12px}
+.case-group{margin:20px 0 30px}
+.case-group>h3{font:700 20px/1.2 Inter,Arial,sans-serif;margin:0 0 12px}
+#special-case-source{display:none}
+.case-card[hidden],.case-group[hidden]{display:none}
+@media(max-width:760px){.case-filters{grid-template-columns:1fr 1fr}.case-filters button{min-height:42px}.nav{max-width:75vw}}
+@media(max-width:460px){.case-filters{grid-template-columns:1fr}.conclusion-brief{padding:19px}.nav a{font-size:10px}}
