@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#11100f"/><stop offset=".62" stop-color="#1c1210"/><stop offset="1" stop-color="#30150e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#f87522" stop-opacity=".42"/><stop offset="1" stop-color="#e34424" stop-opacity="0"/></radialGradient>
+ <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#ce3025"/><stop offset="1" stop-color="#ff8c2a"/></linearGradient>
+ <linearGradient id="box" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#34302c"/><stop offset="1" stop-color="#171615"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="35"/></filter>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#fff" stroke-opacity=".045"/></pattern>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="910" cy="320" r="330" fill="url(#glow)" filter="url(#blur)"/>
+<rect width="1200" height="630" fill="url(#grid)"/>
+<path d="M0 15H1200" stroke="url(#accent)" stroke-width="8"/>
+<g opacity=".3" fill="none" stroke="#ff8c2a" stroke-width="3">
+ <path d="M650 475h60v-90h60v55h60V310h60v95h60V250h60"/>
+ <path d="M650 498h420" stroke="#fff" stroke-opacity=".32"/>
+</g>
+<g transform="translate(754 145)">
+ <ellipse cx="190" cy="370" rx="215" ry="33" fill="#000" opacity=".4"/>
+ <path d="M46 128 312 78l69 48-274 59z" fill="#f4eee8"/>
+ <path d="m107 184 274-58v213c0 14-10 26-24 29l-224 47c-14 3-26-7-26-21z" fill="url(#box)" stroke="#81746c" stroke-width="4"/>
+ <path d="m108 183 274-57v41l-274 59z" fill="#c73b2c"/>
+ <path d="m145 156 203-39" stroke="#161312" stroke-width="13" stroke-linecap="round"/>
+ <path d="M202 48 286 31l12 76-82 18z" fill="#f7f0e8" stroke="#dfd4ca" stroke-width="3"/>
+ <path d="m224 73 39-8" stroke="#df5a37" stroke-width="5" stroke-linecap="round"/>
+ <path d="m224 88 39-8" stroke="#df5a37" stroke-width="5" stroke-linecap="round"/>
+ <path d="m224 103 25-5" stroke="#df5a37" stroke-width="5" stroke-linecap="round"/>
+ <circle cx="330" cy="235" r="7" fill="#ff8c2a"/>
+ <circle cx="330" cy="265" r="7" fill="#ff8c2a" opacity=".65"/>
+ <circle cx="330" cy="295" r="7" fill="#ff8c2a" opacity=".35"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" fill="#f7f2ed">
+ <rect x="72" y="77" width="10" height="54" rx="5" fill="url(#accent)"/>
+ <text x="105" y="102" font-size="22" font-weight="700" letter-spacing="4" fill="#ff9a52">OBSERVATÓRIO ELEITORAL</text>
+ <text x="72" y="258" font-size="68" font-weight="800" letter-spacing="-2">A URNA</text>
+ <text x="72" y="336" font-size="68" font-weight="800" letter-spacing="-2">CHEGOU.</text>
+ <text x="72" y="416" font-size="62" font-weight="800" letter-spacing="-2" fill="#ff8740">O RETRATO, NÃO.</text>
+ <text x="75" y="476" font-size="23" fill="#d1c7bf">Pesquisas eleitorais comparadas ao resultado das urnas</text>
+ <text x="75" y="530" font-size="17" font-weight="700" letter-spacing="3" fill="#a89c93">BRASIL · 2014—2026</text>
+</g>
+<g transform="translate(72 568)">
+ <circle cx="14" cy="14" r="14" fill="#f5eee8"/>
+ <text x="14" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#171312">T</text>
+ <text x="42" y="20" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#d1c7bf">REVISTA TIMELINE</text>
+</g>
+</svg>
