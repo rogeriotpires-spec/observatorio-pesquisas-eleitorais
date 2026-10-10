@@ -50,7 +50,7 @@
 </header>
 
 <header class="top"><div class="topin"><a class="brand" href="index.html" style="color:white;text-decoration:none"><span class="brandmark">O</span> OBSERVATÓRIO ELEITORAL</a><nav class="nav" aria-label="Navegação principal"><a href="#presidencia">Presidência</a><a href="#casos">Casos</a><a class="optional" href="#rankings">Rankings</a><a class="optional" href="#metodo">Método</a><a class="nav-cta" href="explorador.html">Explorar dados</a></nav></div></header>
-<section class="hero"><div class="hero-in"><div><div class="eyebrow">Pesquisas eleitorais · Brasil · 2014–2026 <span class="team-visits"><b>12.342</b> acessos da equipe</span></div><h1>A urna chegou.<br>O retrato, <em>não.</em></h1><p class="hero-copy">Comparamos a última pesquisa de cada instituto, divulgada antes da votação, com o resultado oficial. O objetivo é mostrar o que cada levantamento acertou — e onde ficou distante.</p><p class="hero-meta">NOVE DISPUTAS DOCUMENTADAS · QUATRO CICLOS PRESIDENCIAIS · ESTUDO EXPLORATÓRIO</p><div class="hero-actions"><a class="btn primary" href="#conclusoes">Ver as conclusões</a><a class="btn" href="relatorio-final.pdf?v=e50d43aa" download>Baixar relatório completo</a><span class="team-downloads"><b>7.231</b> downloads pela equipe</span></div></div><aside class="hero-flow" aria-label="O que o estudo compara"><div class="flow-title">A comparação é direta</div><div class="flow-step"><span>01</span><div><b>Última pesquisa</b><small>publicada antes da votação</small></div></div><div class="flow-connector">↓ comparar os percentuais ↓</div><div class="flow-step result"><span>02</span><div><b>Resultado oficial</b><small>registrado nas urnas</small></div></div><p>A diferença é medida candidatura por candidatura e, na série presidencial, também pela margem entre os dois primeiros colocados.</p></aside></div></section>
+<section class="hero"><div class="hero-in"><div><div class="eyebrow">Pesquisas eleitorais · Brasil · 2014–2026 <span class="team-visits"><b data-live-counter="visits">12.342</b> visitas ao site</span></div><h1>A urna chegou.<br>O retrato, <em>não.</em></h1><p class="hero-copy">Comparamos a última pesquisa de cada instituto, divulgada antes da votação, com o resultado oficial. O objetivo é mostrar o que cada levantamento acertou — e onde ficou distante.</p><p class="hero-meta">NOVE DISPUTAS DOCUMENTADAS · QUATRO CICLOS PRESIDENCIAIS · ESTUDO EXPLORATÓRIO</p><div class="hero-actions"><a class="btn primary" href="#conclusoes">Ver as conclusões</a><a class="btn" href="relatorio-final.pdf?v=e50d43aa" download>Baixar relatório completo</a><span class="team-downloads"><b data-live-counter="downloads">7.231</b> downloads do relatório</span></div></div><aside class="hero-flow" aria-label="O que o estudo compara"><div class="flow-title">A comparação é direta</div><div class="flow-step"><span>01</span><div><b>Última pesquisa</b><small>publicada antes da votação</small></div></div><div class="flow-connector">↓ comparar os percentuais ↓</div><div class="flow-step result"><span>02</span><div><b>Resultado oficial</b><small>registrado nas urnas</small></div></div><p>A diferença é medida candidatura por candidatura e, na série presidencial, também pela margem entre os dois primeiros colocados.</p></aside></div></section>
 
 <main class="wrap">
 <section class="section" id="conclusoes"><div class="section-head"><div><span class="section-number">Conclusões principais</span><h2 id="conclusoes-titulo">O que os dados mostram</h2></div><p>Três resultados centrais, com seus recortes e ressalvas.</p></div>
@@ -92,4 +92,54 @@ renderMargin();
 
 </script>
 <div class="author-credit" aria-label="Créditos e redes sociais"><div class="author-credit__inner"><span class="author-credit__byline">Pesquisa e análise: <strong>Rogerio Pires</strong></span><nav class="author-credit__socials" aria-label="Redes sociais do autor"><a href="https://www.instagram.com/rogerrio/" target="_blank" rel="noopener noreferrer">Instagram <b>@rogerrio</b></a><a href="https://x.com/rogerrioX" target="_blank" rel="noopener noreferrer">X <b>@rogerrioX</b></a></nav></div></div>
+<script>
+(() => {
+  const api = "https://observatorio-counter.rogeriotpires.workers.dev";
+  const format = value => Number(value).toLocaleString("pt-BR");
+
+  function show(name, value) {
+    document.querySelectorAll('[data-live-counter="' + name + '"]').forEach(node => {
+      node.textContent = format(value);
+    });
+  }
+
+  async function recordVisitAndLoadCounts() {
+    try {
+      const visitResponse = await fetch(api + "/visit", {
+        method: "POST",
+        keepalive: true
+      });
+      if (visitResponse.ok) {
+        const visit = await visitResponse.json();
+        if (visit.name === "visits") show("visits", visit.value);
+      }
+
+      const countsResponse = await fetch(api + "/counts", { cache: "no-store" });
+      if (!countsResponse.ok) return;
+      const counts = await countsResponse.json();
+      if (Number.isFinite(counts.visits)) show("visits", counts.visits);
+      if (Number.isFinite(counts.downloads)) show("downloads", counts.downloads);
+    } catch (_) {
+      // Keep the last displayed values if the counter service is temporarily unavailable.
+    }
+  }
+
+  document.querySelectorAll('a[download]').forEach(link => {
+    const path = new URL(link.href, window.location.href).pathname;
+    if (!path.endsWith("/relatorio-final.pdf")) return;
+
+    link.addEventListener("click", () => {
+      fetch(api + "/download", {
+        method: "POST",
+        keepalive: true
+      }).then(response => response.ok ? response.json() : null)
+        .then(result => {
+          if (result && result.name === "downloads") show("downloads", result.value);
+        }).catch(() => {});
+    });
+  });
+
+  recordVisitAndLoadCounts();
+})();
+</script>
 </body></html>
