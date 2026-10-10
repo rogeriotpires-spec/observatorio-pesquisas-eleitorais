@@ -34,4 +34,54 @@
 <section class="section"><div class="section-head"><div><span class="section-number">05 · Limitações</span><h2>O que não foi demonstrado.</h2></div></div><div class="guardrail"><strong>Descrição não é causalidade.</strong><p>O estudo não demonstra que as pesquisas causaram voto útil, mudança de preferência, investimento financeiro ou decisões de campanha. Também não prova fraude, má-fé ou intenção, nem autoriza generalização para todo o mercado.</p></div><div class="claim-grid" style="margin-top:14px"><article class="claim"><span class="tag">Rio de Janeiro · 2026</span><h3>Resultado provisório</h3><p>A totalização de 7/10/2026 incluía votos sub judice. A situação jurídica pode alterar a base final.</p></article><article class="claim orange"><span class="tag">Senado PR · 2022</span><h3>Nota do Ipec pendente</h3><p>A correção sobre o período de campo foi atribuída a erro de digitação em reportagem contemporânea; a nota primária autônoma não foi recuperada até o corte.</p></article><article class="claim dark"><span class="tag">Ranking geral</span><h3>Não estimado</h3><p>A quantidade e independência de disputas são insuficientes para intervalos de confiança e ranking nacional de institutos.</p></article></div></section>
 <section class="section"><div class="section-head"><div><span class="section-number">06 · Documentos</span><h2>Leia e confira.</h2></div></div><div class="download-grid"><a class="download" href="relatorio-final.pdf?v=e50d43aa" download><strong>Relatório científico exploratório</strong><span>PDF completo · 13 páginas</span></a><a class="download" href="explorador.html"><strong>Explorador das estimativas</strong><span>Tabela interativa com filtros</span></a><a class="download" href="dados/matriz_de_casos.csv"><strong>Matriz de seleção</strong><span>CSV · nove casos</span></a><a class="download" href="dados/presidencia_par_top2_2014_2026_calculado.csv"><strong>Base presidencial calculada</strong><span>CSV · erros por candidatura</span></a><a class="download" href="dados/senado_pr_2022_comparacao.csv"><strong>Base do Senado PR</strong><span>CSV · dez candidaturas</span></a></div></section>
 </main><footer class="footer"><div class="footer-in"><span>OBSERVATÓRIO DE PESQUISAS ELEITORAIS · VERSÃO COM CORTE EM 7/10/2026</span><a href="index.html">Voltar à página inicial ↑</a></div></footer><div class="author-credit" aria-label="Créditos e redes sociais"><div class="author-credit__inner"><span class="author-credit__byline">Pesquisa e análise: <strong>Rogerio Pires</strong></span><nav class="author-credit__socials" aria-label="Redes sociais do autor"><a href="https://www.instagram.com/rogerrio/" target="_blank" rel="noopener noreferrer">Instagram <b>@rogerrio</b></a><a href="https://x.com/rogerrioX" target="_blank" rel="noopener noreferrer">X <b>@rogerrioX</b></a></nav></div></div>
+<script>
+(() => {
+  const api = "https://observatorio-counter.rogeriotpires.workers.dev";
+  const format = value => Number(value).toLocaleString("pt-BR");
+
+  function show(name, value) {
+    document.querySelectorAll('[data-live-counter="' + name + '"]').forEach(node => {
+      node.textContent = format(value);
+    });
+  }
+
+  async function recordVisitAndLoadCounts() {
+    try {
+      const visitResponse = await fetch(api + "/visit", {
+        method: "POST",
+        keepalive: true
+      });
+      if (visitResponse.ok) {
+        const visit = await visitResponse.json();
+        if (visit.name === "visits") show("visits", visit.value);
+      }
+
+      const countsResponse = await fetch(api + "/counts", { cache: "no-store" });
+      if (!countsResponse.ok) return;
+      const counts = await countsResponse.json();
+      if (Number.isFinite(counts.visits)) show("visits", counts.visits);
+      if (Number.isFinite(counts.downloads)) show("downloads", counts.downloads);
+    } catch (_) {
+      // Keep the last displayed values if the counter service is temporarily unavailable.
+    }
+  }
+
+  document.querySelectorAll('a[download]').forEach(link => {
+    const path = new URL(link.href, window.location.href).pathname;
+    if (!path.endsWith("/relatorio-final.pdf")) return;
+
+    link.addEventListener("click", () => {
+      fetch(api + "/download", {
+        method: "POST",
+        keepalive: true
+      }).then(response => response.ok ? response.json() : null)
+        .then(result => {
+          if (result && result.name === "downloads") show("downloads", result.value);
+        }).catch(() => {});
+    });
+  });
+
+  recordVisitAndLoadCounts();
+})();
+</script>
 </body></html>
