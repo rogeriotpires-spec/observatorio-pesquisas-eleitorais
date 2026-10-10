@@ -140,3 +140,11 @@ h1,h2,.section-head h2,.panel h3,.case-card h3,.page-head h1{font-family:"Playfa
 .ranking.partial .rankline .pos{display:none}
 
 
+
+
+/* Totais acumulados informados pela equipe, em posição discreta. */
+.eyebrow .team-visits{display:inline-flex;align-items:center;gap:5px;margin-left:12px;padding:3px 9px;border:1px solid #ffffff30;border-radius:999px;color:#d5cbc4;font:600 10px/1.3 Inter,Arial,sans-serif;letter-spacing:0;text-transform:none;white-space:nowrap}
+.team-visits b,.team-downloads b{color:#ffb389;font-variant-numeric:tabular-nums}
+.hero-actions .team-downloads{align-self:center;color:#bdb2aa;font-size:11px;white-space:nowrap}
+.download-count{display:inline-block;margin-left:6px;color:#ffb389;font-size:10px;white-space:nowrap}
+@media(max-width:600px){.eyebrow .team-visits{margin:7px 0 0;display:flex;width:max-content}.hero-actions{align-items:flex-start}.hero-actions .team-downloads{align-self:center;font-size:10px}}
