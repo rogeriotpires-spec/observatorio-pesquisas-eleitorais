@@ -23,6 +23,22 @@
 <meta name="twitter:image" content="https://observatorio.revistatimeline.com/og-image.svg">
 <title>Pesquisas & Urnas | Observatório Eleitoral</title>
 <link rel="stylesheet" href="site.css?v=menu-filtros-conclusoes-20261010">
+<style>
+.nav .nav-tab{appearance:none;border:0;background:transparent;color:#c9bdb4;padding:8px 0;font:700 12px/1.3 Inter,Arial,sans-serif;white-space:nowrap;cursor:pointer}
+.nav .nav-tab:hover,.nav .nav-tab:focus-visible,.nav .nav-tab[aria-pressed="true"]{color:#ffb389}
+.nav .nav-cta{white-space:nowrap}
+.section[hidden],.hero[hidden]{display:none!important}
+.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.overview-card{display:flex;flex-direction:column;align-items:flex-start;min-height:220px;padding:21px;background:linear-gradient(145deg,#211d1b,#121110);border:1px solid #3a2d24;border-radius:14px;box-shadow:var(--shadow)}
+.overview-card h3{margin:9px 0 6px;font:700 22px/1.15 "Playfair Display",Georgia,serif}
+.overview-card p{margin:0 0 15px;color:#d0c8c2;font-size:13px;line-height:1.5}
+.overview-card p b{color:#ffb389}
+.overview-link{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding:0;border:0;background:none;color:#ffb389;text-decoration:none;font:800 12px/1.4 Inter,Arial,sans-serif;cursor:pointer}
+.overview-link:hover,.overview-link:focus-visible{color:#fff;text-decoration:underline}
+.overview-card--explorer{border-color:#7c4221;background:linear-gradient(145deg,#2a1a11,#17110d)}
+@media(max-width:850px){.overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.overview-grid{grid-template-columns:1fr}.overview-card{min-height:0}.nav{max-width:76vw}.nav .nav-tab{font-size:10px}}
+</style>
 </head>
 <body>
 
@@ -49,10 +65,18 @@
   </div>
 </header>
 
-<header class="top"><div class="topin"><a class="brand" href="index.html" style="color:white;text-decoration:none"><span class="brandmark">O</span> OBSERVATÓRIO ELEITORAL</a><nav class="nav" aria-label="Navegação principal do Observatório"><a href="#conclusoes">Conclusões</a><a href="#comparar">Comparar pesquisas</a><a href="#casos-especiais">Casos e filtros</a><a href="#metodo">Método e dados</a><a class="nav-cta" href="explorador.html">Explorar dados</a></nav></div></header>
+<header class="top"><div class="topin"><a class="brand" href="index.html" style="color:white;text-decoration:none"><span class="brandmark">O</span> OBSERVATÓRIO ELEITORAL</a><nav class="nav" aria-label="Áreas do Observatório"><button class="nav-tab" type="button" data-view-target="overview" aria-pressed="true">Visão geral</button><button class="nav-tab" type="button" data-view-target="comparison" aria-pressed="false">Comparar pesquisas</button><button class="nav-tab" type="button" data-view-target="cases" aria-pressed="false">Casos e filtros</button><button class="nav-tab" type="button" data-view-target="method" aria-pressed="false">Método e dados</button><a class="nav-cta" href="explorador.html">Explorar dados</a></nav></div></header>
 <section class="hero"><div class="hero-in"><div><div class="eyebrow">Pesquisas eleitorais · Brasil · 2014–2026 <span class="team-visits"><b data-live-counter="visits">12.342</b> visitas ao site</span></div><h1>A urna chegou.<br>O retrato, <em>não.</em></h1><p class="hero-copy">Comparamos a última pesquisa de cada instituto, divulgada antes da votação, com o resultado oficial. O objetivo é mostrar o que cada levantamento acertou — e onde ficou distante.</p><p class="hero-meta">NOVE DISPUTAS NO RECORTE PRINCIPAL · QUATRO CICLOS PRESIDENCIAIS · ESTUDO EXPLORATÓRIO</p><div class="hero-actions"><a class="btn primary" href="#conclusoes">Ver as conclusões</a><a class="btn" href="relatorio-final.pdf?v=e50d43aa" download>Baixar relatório completo</a><span class="team-downloads"><b data-live-counter="downloads">7.231</b> downloads do relatório</span></div></div><aside class="hero-flow" aria-label="O que o estudo compara"><div class="flow-title">A comparação é direta</div><div class="flow-step"><span>01</span><div><b>Última pesquisa</b><small>publicada antes da votação</small></div></div><div class="flow-connector">↓ comparar os percentuais ↓</div><div class="flow-step result"><span>02</span><div><b>Resultado oficial</b><small>registrado nas urnas</small></div></div><p>A diferença é medida candidatura por candidatura e, na série presidencial, também pela margem entre os dois primeiros colocados.</p></aside></div></section>
 
-<main class="wrap">
+<main class="wrap">\n<section class="section overview-snapshot" id="overview-snapshot">
+<div class="section-head"><div><span class="section-number">Painel do estudo</span><h2>O essencial, em um só lugar</h2></div><p>Um resumo dos achados e dos outros blocos. Escolha uma área no menu para ver somente aquele conteúdo.</p></div>
+<div class="overview-grid">
+<article class="overview-card"><span class="case-label">Comparações</span><h3>Pesquisas e urna, lado a lado</h3><p>O estudo reúne 16 pesquisas presidenciais em quatro ciclos. Na comparação das margens, a diferença média foi de <b>+4,46 p.p.</b></p><button class="overview-link" type="button" data-view-target="comparison">Abrir comparações <span aria-hidden="true">→</span></button></article>
+<article class="overview-card"><span class="case-label">Rankings locais</span><h3>A amostra varia por eleição</h3><p>Há <b>2 institutos</b> no recorte de 2014 e 2018. Em 2022, são três linhas, com Datafolha e Ipec agrupados.</p><button class="overview-link" type="button" data-view-target="comparison">Ver recortes e rankings <span aria-hidden="true">→</span></button></article>
+<article class="overview-card"><span class="case-label">Casos e filtros</span><h3>Discrepâncias que merecem leitura própria</h3><p><b>Dilma</b> liderava as duas pesquisas para o Senado em Minas e terminou em quarto. <b>Daniel Silveira</b> recebeu 1,56 milhão de votos nominais; o efeito jurídico é tratado separadamente.</p><button class="overview-link" type="button" data-view-target="cases">Abrir casos e filtros <span aria-hidden="true">→</span></button></article>
+<article class="overview-card"><span class="case-label">Método e dados</span><h3>Critérios, fontes e limites</h3><p>Comparamos a última pesquisa antes da votação, usando bases equivalentes. O relatório apresenta os critérios, as fontes e as ressalvas.</p><button class="overview-link" type="button" data-view-target="method">Ver método e dados <span aria-hidden="true">→</span></button></article>
+<article class="overview-card overview-card--explorer"><span class="case-label">Explore os registros</span><h3>Consulte as estimativas diretamente</h3><p>Filtre por candidatura, instituto, cargo e eleição.</p><a class="overview-link" href="explorador.html">Abrir explorador <span aria-hidden="true">→</span></a></article>
+</div></section>
 <section class="section" id="conclusoes"><div class="section-head"><div><span class="section-number">Conclusões principais</span><h2 id="conclusoes-titulo">O que os dados mostram</h2></div><p>Três resultados centrais, com seus recortes e ressalvas.</p></div>
 <div class="claim-grid results-grid"><article class="claim dark"><span class="tag">01 · Presidência · quatro eleições</span><div class="stat">13/16</div><h3>Pesquisas mostraram uma vantagem maior para o candidato do PT.</h3><p>Em 13 das 16 pesquisas, a vantagem do candidato do PT sobre o principal adversário foi maior na pesquisa que na urna. Diferença média entre as margens: +4,46 pontos percentuais (p.p.).</p></article><article class="claim red"><span class="tag">02 · Bolsonaro e Flávio · 14 pesquisas</span><div class="stat">14/14</div><h3>Todas as estimativas ficaram abaixo do resultado.</h3><p>As 14 estimativas subestimaram Bolsonaro em 2018 e 2022 e Flávio em 2026. Diferença média: −3,89 pontos percentuais.</p></article><article class="claim orange"><span class="tag">03 · Maior distância individual</span><div class="stat">−15,12<span class="unit"> p.p.</span></div><h3>Paulo Martins no Senado do Paraná.</h3><p>O Ipec estimou 14%; Paulo recebeu 29,12%. A pesquisa ficou 15,12 pontos percentuais abaixo do resultado.</p></article></div><div class="conclusion-brief"><span class="section-number">A conclusão do estudo</span><h3>Uma pesquisa distante da urna pode mudar a leitura pública da disputa.</h3><p>Os dados documentam discrepâncias grandes e, em alguns casos, inversões na ordem dos candidatos. Isso pode prejudicar a percepção de viabilidade de quem foi subestimado e favorecer quem aparece mais forte. É um efeito possível e relevante, mas os números deste estudo não medem quantos votos foram alterados nem provam transferência direta ou intenção de influenciar o eleitor.</p></div></section>
 
@@ -171,4 +195,31 @@ renderMargin();
   recordVisitAndLoadCounts();
 })();
 </script>
-</body></html>
+<script>
+(() => {
+  const groups = {
+    overview: ["overview-snapshot", "conclusoes"],
+    comparison: ["comparar", "rankings"],
+    cases: ["casos", "casos-especiais"],
+    method: ["metodo", "dados"]
+  };
+  const navItems = [...document.querySelectorAll("[data-view-target]")];
+  const sections = [...document.querySelectorAll("main .section")];
+  const hero = document.querySelector(".hero");
+  function showView(view, updateHistory = false) {
+    if (!groups[view]) view = "overview";
+    sections.forEach(section => { section.hidden = !groups[view].includes(section.id); });
+    if (hero) hero.hidden = view !== "overview";
+    navItems.forEach(item => item.setAttribute("aria-pressed", String(item.dataset.viewTarget === view)));
+    if (updateHistory) history.pushState({ observatorioView: view }, "", view === "overview" ? "#visao-geral" : "#visao-" + view);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  navItems.forEach(item => item.addEventListener("click", () => showView(item.dataset.viewTarget, true)));
+  window.addEventListener("popstate", () => {
+    const key = location.hash.replace("#visao-", "");
+    showView(groups[key] ? key : "overview");
+  });
+  const initial = location.hash.startsWith("#visao-") ? location.hash.replace("#visao-", "") : "overview";
+  showView(groups[initial] ? initial : "overview", false);
+})();
+</script>\n</body></html>
