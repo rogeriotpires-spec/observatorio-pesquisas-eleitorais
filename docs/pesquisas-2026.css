@@ -15,3 +15,70 @@
 .coleta-home-update{margin-top:25px;padding:17px 20px;border:1px solid #805332;border-radius:10px;background:linear-gradient(115deg,#312014,#18120e);max-width:700px}.coleta-home-update b{display:block;color:#ffca9f;font-size:15px}.coleta-home-update p{font-size:12px;line-height:1.55;color:#ddc9b7;margin:7px 0 10px}.coleta-home-update a{color:#ffe0c6;font-size:12px;font-weight:800}.coleta-historical-note{padding:12px 16px;margin:18px 0;color:#d5c0af;font-size:12px;border:1px solid #583c29;border-radius:8px}.coleta-historical-note a{color:#ffd0aa}
 @media(max-width:800px){.coleta-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.coleta-filters{grid-template-columns:1fr 1fr}.coleta-filters .coleta-search{grid-column:1/-1}.coleta-extra-grid{grid-template-columns:1fr 1fr}.coleta-page .topin{align-items:flex-start}.coleta-page .nav{gap:17px}.coleta-downloads{grid-template-columns:1fr}}
 @media(max-width:500px){.coleta-page .wrap{padding-left:14px;padding-right:14px}.coleta-intro{padding-top:28px}.coleta-intro h1{font-size:38px}.coleta-intro .lede{font-size:15px}.coleta-kpis{gap:8px}.coleta-kpis article{padding:14px}.coleta-tabs button{padding:10px 13px}.coleta-filters{padding:12px;gap:10px}.coleta-extra-grid{grid-template-columns:1fr}.poll-card header,.poll-meta,.poll-base,.poll-temporal,.poll-audit,.poll-links{padding-left:14px;padding-right:14px}.poll-table td,.poll-table th{padding-left:14px;padding-right:14px}.coleta-page input,.coleta-page select{font-size:16px}.coleta-page .topin{padding:12px 14px;gap:10px}.coleta-page .brand{font-size:11px}.coleta-date{font-size:11px}.coleta-status{margin-left:5px}}
+
+/* === TEMA CLARO (gerado) === */
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-page{color-scheme:light}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-intro .lede{color:#3a312b}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-date{color:#57493f}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-status{border:1px solid #c79673;color:#502400}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-kpis article{background:linear-gradient(140deg,#eddfd6,#f5f1ea);border:1px solid #dac8ba}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-kpis strong{color:#1a1714}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-kpis span{color:#4c4038}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-note{background:#f0e6de;color:#36261a}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-tabs{border-bottom:1px solid #dbccbf}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-tabs button{background:#f4ede7;color:#4e3f33;border:1px solid #cbbaae}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-tabs button[aria-selected="true"]{border-color:#b65916}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-page button:focus-visible,html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-page a:focus-visible,html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-page input:focus-visible,html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-page select:focus-visible,html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-page summary:focus-visible{outline:3px solid #cc4900}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-filters{background:#f3eae4;border:1px solid #d6c5bb}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-filters label,html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-extra label{color:#423226}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-page input,html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-page select{color:#22160b;background:#f6f0ec;border:1px solid #c0aa99}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-page select option{background:#f6f0ec;color:#1a1714}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-extra{border:1px solid #d6c5bb;background:#f4ebe6}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-extra summary{color:#cc4900}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-toolbar p{color:#4a3f36}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-button{background:#f0e2d8;color:#4f2200}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-button:hover{background:#e6cebf}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-card{border:1px solid #d0baa9;background:#f4ede7}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-card header{background:linear-gradient(110deg,#edded5,#f4ede7);border-bottom:1px solid #dcc7ba}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-card .poll-kicker{color:#bd5f0f}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-card .poll-scenario{color:#413227}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-meta{color:#4a3b30}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-meta b{color:#251509}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-base{color:#b65c16;background:#f0e5de}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-temporal{background:#f3ebe3;color:#47382c}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-temporal.flag{background:#edddce;color:#593a00}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-table th{color:#695441;border-bottom:1px solid #dac5b8}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-table td{border-bottom:1px solid #e2d7cf}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-table tr:nth-child(even){background:#f2e9e1}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-table .pct{color:#602b00}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-audit{color:#534438}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-audit summary{color:#552600}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .poll-links a{color:#552600}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-empty{background:#f3eae4;border:1px dashed #cfae96;color:#433428}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-empty strong{color:#1a1714}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-pager span{color:#4e3724}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .source-card{border:1px solid #d7c3b3;background:#f4ede7}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .source-card p{color:#554334}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .source-card details{color:#4f3d2f}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .source-card summary{color:#bc5b10}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .source-card .source-status{color:#b37019}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-coverage-table{border:1px solid #d5c1b1}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-coverage-table th{background:#f0e2d8;color:#a1612b}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-coverage-table td{border-bottom:1px solid #e0d2c8}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-coverage-table tr:nth-child(even){background:#f3eae5}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-coverage-table small{color:#645141}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coverage-state{color:#4b3626}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-downloads article{border:1px solid #d8c2b1;background:#f3ebe5}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-downloads p,html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-method p,html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-method li{color:#504032}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-method{border:1px solid #ddc6b4}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-method a{color:#552600}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-footer{border-top:1px solid #dfcfbf;color:#573e29}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-footer a{color:#552600}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-loading{color:#b1681b}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-home-update{border:1px solid #cda07f;background:linear-gradient(115deg,#ebdace,#f3ebe5)}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-home-update b{color:#602b00}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-home-update p{color:#483422}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-home-update a{color:#391a00}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-historical-note{color:#503b2a;border:1px solid #d6baa7}
+html:is([data-tema="claro"],[data-tema="mesclado"]) .coleta-historical-note a{color:#552600}
+/* === FIM TEMA CLARO === */
